@@ -36,25 +36,27 @@
         <h1>TODO App</h1>
 
         <!-- Form to create a new task -->
-        <form class="formTasks" onsubmit="createTask(this.task.value, this.status.value);" id="formTasks">
-          <div class="row g-3 align-items-center mb-4 mt-4">
-            <div class="col-4">
-              <label for="task" class="form-label">Task</label>
-              <input type="text" class="form-control" id="task" required>
+        <div class="form-container">
+          <form class="formTasks" onsubmit="createTask(this.task.value, this.status.value);" id="formTasks">
+            <div class="row g-3 align-items-center mb-4 mt-4">
+              <div class="col-lg-4 col-md-4">
+                <label for="task" class="form-label">Task</label>
+                <input type="text" class="form-control" id="task" required>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" required>
+                  <option value="Completed">Completed</option>
+                  <option value="In progress">In progress</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <button type="submit" class="btn btn-primary">Create task</button>
+              </div>
             </div>
-            <div class="col-4">
-              <label for="status" class="form-label">Status</label>
-              <select class="form-select" id="status" required>
-                <option value="Completed">Completed</option>
-                <option value="In progress">In progress</option>
-                <option value="Pending">Pending</option>
-              </select>
-            </div>
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary">Create task</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
 
         <hr class="bg-info border-2 border-top border-info" />
 
@@ -90,11 +92,11 @@
 
           <form class="formTasks" id="editFormTasks">
             <div class="row g-3 align-items-center">
-              <div class="col-6">
+              <div class="col-lg-6 col-md-6">
                 <label for="task" class="form-label">Task</label>
                 <input type="text" class="form-control" id="editedTask" required>
               </div>
-              <div class="col-6">
+              <div class="col-lg-6 col-md-6">
                 <label for="status" class="form-label">Status</label>
                 <select class="form-select" id="editedStatus" required>
                   <option value="Completed">Completed</option>

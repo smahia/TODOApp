@@ -56,7 +56,7 @@ def get_task(task_id):
     return task
 
 App()
-eel.start('index.html', size=(1000, 600))  # Run App window
+eel.start('index.html', size=(1080, 800))  # Run App window
 
 # Closing the connection
 cursor.close()
