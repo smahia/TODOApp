@@ -19,7 +19,10 @@ source .venv/bin/activate
 ## Install dependencies
 ./.venv/bin/python3 -m pip install eel
 
-./.venv/bin/python3 -m pip install mysql-connector-python
+./.venv/bin/python3 -m pip install mysql-connector-python - **This is no longer necessary as the application now uses SQLite**
 
 ## Generate/Update requirements.txt
 ./.venv/bin/python3 -m pip freeze > requirements.txt
+
+## SQLite Viewer
+https://inloop.github.io/sqlite-viewer/
