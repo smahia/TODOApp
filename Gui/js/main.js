@@ -13,6 +13,15 @@ async function showTasks() {
         tdAction.setAttribute('class', 'actionButtons');
         tdTask.innerHTML = tasks[i][1];
         tdStatus.innerHTML = tasks[i][2];
+
+        if (tasks[i][2] == 'Completed') {
+            tdStatus.setAttribute('class', 'text-success');
+        } else if (tasks[i][2] == 'In progress') {
+            tdStatus.setAttribute('class', 'text-warning');
+        } else if (tasks[i][2] == 'Pending') {
+            tdStatus.setAttribute('class', 'text-danger');
+        }
+
         tdAction.innerHTML = '<a data-id="' + tasks[i][0] + '" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></a>';
         tdAction.innerHTML += '<a onClick= "deleteTask(' + tasks[i][0] + ')"><i class="fa-solid fa-trash"></i></a>';
         tr.appendChild(tdTask);

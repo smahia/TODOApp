@@ -28,48 +28,55 @@
 </head>
 
 <body>
-  <div class="container">
+  <main>
 
-    <h1>TODO App</h1>
+    <div class="container">
 
-    <!-- Form to create a new task -->
-    <form class="formTasks" onsubmit="createTask(this.task.value, this.status.value);" id="formTasks">
-      <div class="row g-3 align-items-center mb-4 mt-4">
-        <div class="col-4">
-          <label for="task" class="form-label">Task</label>
-          <input type="text" class="form-control" id="task" required>
-        </div>
-        <div class="col-4">
-          <label for="status" class="form-label">Status</label>
-          <select class="form-select" id="status" required>
-            <option value="Completed">Completed</option>
-            <option value="In progress">In progress</option>
-            <option value="Pending">Pending</option>
-          </select>
-        </div>
-        <div class="col-4">
-          <button type="submit" class="btn btn-primary">Create task</button>
+      <div class="container px-3 py-5 my-4 content">
+        <h1>TODO App</h1>
+
+        <!-- Form to create a new task -->
+        <form class="formTasks" onsubmit="createTask(this.task.value, this.status.value);" id="formTasks">
+          <div class="row g-3 align-items-center mb-4 mt-4">
+            <div class="col-4">
+              <label for="task" class="form-label">Task</label>
+              <input type="text" class="form-control" id="task" required>
+            </div>
+            <div class="col-4">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-select" id="status" required>
+                <option value="Completed">Completed</option>
+                <option value="In progress">In progress</option>
+                <option value="Pending">Pending</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary">Create task</button>
+            </div>
+          </div>
+        </form>
+
+        <hr class="bg-info border-2 border-top border-info" />
+
+        <!-- Table with tasks -->
+        <div class="tasks">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
       </div>
-    </form>
 
-    <hr class="bg-info border-2 border-top border-info" />
-
-    <!-- Table with tasks -->
-    <div class="tasks">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Task</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
     </div>
-  </div>
+
+  </main>
 
   <!-- Modal for editing a task -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -105,7 +112,7 @@
           </form>
 
         </div>
-        
+
       </div>
     </div>
   </div>
